@@ -1,0 +1,108 @@
+.galeria-container {
+	padding: 4rem 2rem;
+	background-color: #111;
+	color: #fff;
+
+	.galeria-titulo {
+		text-align: center;
+		font-size: 2.5rem;
+		font-family: "Bebas Neue", sans-serif;
+		margin-bottom: 2rem;
+	}
+
+	.galeria {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.galeria-item {
+		overflow: hidden;
+		border-radius: 1rem;
+		background-color: #222;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		transition: transform 0.3s ease;
+	}
+	.galeria-item:hover {
+		transform: scale(1.02);
+	}
+
+	.galeria-item video {
+		width: 100%;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+		border-radius: 1rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.galeria {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1rem;
+		padding: 0;
+	}
+
+	.galeria-item {
+		background-color: transparent;
+		padding: 0;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 320px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.galeria-item video {
+		width: 100%;
+		max-width: 300px;
+		height: auto;
+		border-radius: 0.5rem;
+	}
+
+	.galeria-titulo {
+		font-size: 2rem;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	.sobre-nosotros {
+		padding: 2rem 1.5rem;
+	}
+
+	.titulo-sobre-nosotros {
+		font-size: 2.2rem;
+	}
+
+	.texto-sobre-nosotros {
+		font-size: 1.1rem;
+		line-height: 1.7;
+	}
+
+	.subtitulo-mapa {
+		font-size: 1.7rem;
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.descripcion-mapa {
+		font-size: 1.1rem;
+	}
+
+	.mapa-container iframe {
+		width: 100%;
+		height: 300px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.galeria-container {
+		margin-top: 0;
+		padding-top: 0;
+	}
+}

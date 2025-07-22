@@ -1,0 +1,142 @@
+.servicios-container {
+	padding: 2rem 2rem;
+	background-color: #111;
+	text-align: center;
+
+	.servicios-titulo {
+		font-family: "Bebas Neue", sans-serif;
+		font-size: 2.4rem;
+		margin-bottom: 1rem;
+		color: #ededed;
+	}
+
+	.servicios-subtitulo {
+		font-family: "Barlow Condensed", sans-serif;
+		font-size: 1.3rem;
+		color: #ccc;
+		margin-bottom: 2rem;
+	}
+
+	.servicios {
+		max-width: 1600px;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		gap: 2rem;
+
+		.tarjeta-servicios {
+			background-color: #1a1a1a;
+			border: 1px solid #000;
+			padding: 2rem 1rem;
+			border-radius: 1rem;
+			text-align: center;
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+		.tarjeta-servicios:hover {
+			cursor: pointer;
+		}
+
+		.servicio-img {
+			width: 200px;
+			max-width: 100%;
+			height: 200px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin-bottom: 1rem;
+			transition: transform 0.4s ease;
+			transform: scale(1.1);
+		}
+
+		.servicio-img:hover {
+			transform: scale(1);
+		}
+
+		.servicio-titulo {
+			font-family: "Bebas Neue", sans-serif;
+			font-size: 1.5rem;
+			margin-bottom: 1rem;
+			color: #ededed;
+		}
+
+		.servicio-titulo-efecto {
+			font-family: "Bebas Neue", sans-serif;
+			font-size: 1.5rem;
+			margin-bottom: 1rem;
+			color: red;
+		}
+
+		.servicio-descripcion {
+			font-family: "Barlow Condensed", sans-serif;
+			font-size: 1rem;
+			line-height: 1.4;
+			color: #ccc;
+		}
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	.titulo-hero {
+		font-size: 2.5rem;
+	}
+	.frase-hero {
+		font-size: 1.2rem;
+	}
+
+	.servicios {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+		padding: 1.5rem;
+	}
+
+	.servicio {
+		width: 100%;
+		max-width: 600px;
+		padding: 1rem;
+		background-color: #1a1a1a;
+		border-radius: 0.5rem;
+		text-align: center;
+	}
+
+	.servicio h3 {
+		font-size: 1.6rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.servicio p {
+		font-size: 1.1rem;
+		line-height: 1.6;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.titulo-hero {
+		font-size: 2rem;
+		position: relative;
+		top: 0;
+		margin: 0 auto;
+	}
+	.frase-hero {
+		font-size: 1rem;
+	}
+
+	.servicios-container .servicios {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+		padding: 1rem;
+	}
+
+	.tarjeta-servicios {
+		padding: 2rem 1rem;
+	}
+
+	.servicio-img {
+		width: 220px;
+		height: 220px;
+	}
+}
