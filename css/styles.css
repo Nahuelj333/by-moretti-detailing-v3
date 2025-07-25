@@ -184,18 +184,20 @@ body {
 		text-align: center;
 		margin-top: 1rem;
 	}
-
 	.hero {
-		background-image: url("/assets/auto.png");
+		min-height: auto; /* Evita altura forzada */
+		padding: 2rem 1rem;
+		background-image: url("../assets/auto.png");
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+	}
 
-		.hero-content {
-			gap: 1.5rem;
-		}
-		.logo-hero img {
-			display: none;
-		}
+	.hero-content {
+		gap: 1.5rem;
+	}
+
+	.logo-hero img {
+		display: none;
 	}
 }
