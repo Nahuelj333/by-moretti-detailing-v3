@@ -29,7 +29,7 @@
 					<a href="#Sobre-nosotros" class="nav-item">Sobre Nosotros</a>
 				</nav>
 				<a
-					href="https://wa.me/5491138130053?text=Hola%2C%20quiero%20reservar%20un%20turno%20para%20mi%20auto"
+					href="https://wa.me/5491130572348?text=Hola%2C%20quiero%20reservar%20un%20turno%20para%20mi%20auto"
 					class="header-boton"
 					target="_blank"
 					>Reservar turno</a
@@ -60,86 +60,76 @@
 				<h3 class="servicios-subtitulo">
 					Elegí el mejor tratamiento para tu vehículo
 				</h3>
+
 				<div class="servicios">
-					<div class="tarjeta-servicios">
+					<!-- Lavados -->
+					<div class="tarjeta-servicios" data-modal="lavados">
 						<img
-							src="assets/exterior_detail.avif"
-							alt=""
+							src="assets/lavados.avif"
+							alt="Lavado premium"
 							class="servicio-img"
 						/>
-						<h3 class="servicio-titulo">
-							Lavado <span class="servicio-titulo-efecto">premiun</span>
-						</h3>
-						<p class="servicio-descripcion">
-							Limpieza profunda exterior e interior con productos de alta
-							calidad.
-						</p>
+						<h3 class="servicio-titulo">Lavados y <span>Detailing</span></h3>
 					</div>
-					<div class="tarjeta-servicios">
-						<img src="assets/img.avif" alt="" class="servicio-img" />
-						<h3 class="servicio-titulo">
-							Arreglo de <span class="servicio-titulo-efecto">bollos</span>
-						</h3>
-						<p class="servicio-descripcion">
-							Limpieza profunda exterior e interior con productos de alta
-							calidad.
-						</p>
+
+					<!-- Sacabollos -->
+					<div class="tarjeta-servicios" data-modal="bollos">
+						<img src="assets/img.avif" alt="Sacabollos" class="servicio-img" />
+						<h3 class="servicio-titulo">Saca<span>Bollos</span></h3>
 					</div>
-					<div class="tarjeta-servicios">
+
+					<!-- Corrección de pintura -->
+					<div class="tarjeta-servicios" data-modal="pintura">
 						<img
 							src="assets/correccion_de_pintura.avif"
-							alt=""
+							alt="Corrección de pintura"
 							class="servicio-img"
 						/>
-						<h3 class="servicio-titulo">
-							Correcion de <span class="servicio-titulo-efecto">pintura</span>
-						</h3>
-						<p class="servicio-descripcion">
-							Limpieza profunda exterior e interior con productos de alta
-							calidad.
-						</p>
+						<h3 class="servicio-titulo">Corrección de <span>Pintura</span></h3>
 					</div>
-					<div class="tarjeta-servicios">
+
+					<!-- Detalles exteriores -->
+					<div class="tarjeta-servicios" data-modal="detalles">
 						<img
 							src="assets/exterior_detail.avif"
-							alt=""
+							alt="Detalles exteriores"
 							class="servicio-img"
 						/>
-						<h3 class="servicio-titulo">
-							Detalles <span class="servicio-titulo-efecto">exteriores</span>
-						</h3>
-						<p class="servicio-descripcion">
-							Limpieza profunda exterior e interior con productos de alta
-							calidad.
-						</p>
+						<h3 class="servicio-titulo">Detalles <span>Exteriores</span></h3>
 					</div>
-					<div class="tarjeta-servicios">
-						<img src="assets/opticas.avif" alt="" class="servicio-img" />
-						<h3 class="servicio-titulo">
-							Pulido de <span class="servicio-titulo-efecto">ópticas</span>
-						</h3>
-						<p class="servicio-descripcion">
-							Restauramos la transparencia y brillo de tus ópticas.
-						</p>
+
+					<!-- Pulido de ópticas -->
+					<div class="tarjeta-servicios" data-modal="opticas">
+						<img
+							src="assets/opticas.avif"
+							alt="Pulido de ópticas"
+							class="servicio-img"
+						/>
+						<h3 class="servicio-titulo">Pulido de <span>Ópticas</span></h3>
 					</div>
-					<div class="tarjeta-servicios">
-						<img src="assets/full_servicio.avif" alt="" class="servicio-img" />
-						<h3 class="servicio-titulo">
-							Paquete <span class="servicio-titulo-efecto">completo</span>
-						</h3>
-						<p class="servicio-descripcion">
-							Limpieza profunda exterior e interior con productos de alta
-							calidad.
-						</p>
+
+					<!-- Paquete completo -->
+					<div class="tarjeta-servicios" data-modal="completo">
+						<img
+							src="assets/full_servicio.avif"
+							alt="Paquete completo"
+							class="servicio-img"
+						/>
+						<h3 class="servicio-titulo">Paquete <span>Completo</span></h3>
 					</div>
 				</div>
 			</section>
 
+			<!-- Modal Genérico -->
+			<div id="modal" class="modal">
+				<div class="modal-contenido">
+					<!-- El JS insertará aquí el contenido dinámico -->
+				</div>
+			</div>
+
 			<section class="galeria-container" id="Galeria">
 				<h2 class="galeria-titulo">Algunos de nuestros trabajos</h2>
-				<!-- <h3 class="galeria-subtitulo">
-          Muchos clientes satisfechos con los resultados!
-        </h3> -->
+
 				<div class="galeria">
 					<!-- CADA ITEM-->
 					<div class="galeria-item">
@@ -206,11 +196,15 @@
 							/>
 						</svg>
 					</a>
-					<a href="tel:+5491138130053" aria-label="Teléfono">
-						<!-- Teléfono -->
-						<svg viewBox="0 0 24 24" class="icono">
+					<a
+						href="https://www.facebook.com/bymorettidetainling?locale=es_LA"
+						aria-label="Facebokk"
+						target="_blank"
+					>
+						<!-- Facebook -->
+						<svg class="icono" viewBox="0 0 16 16">
 							<path
-								d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.05-.24 11.36 11.36 0 0 0 3.58.57 1 1 0 0 1 1 1v3.41a1 1 0 0 1-1 1A17 17 0 0 1 3 5a1 1 0 0 1 1-1h3.41a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.58 1 1 0 0 1-.24 1.05l-2.12 2.16Z"
+								d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
 							/>
 						</svg>
 					</a>
@@ -245,7 +239,7 @@
 						</svg>
 					</a>
 					<a
-						href="https://wa.me/5491138130053"
+						href="https://wa.me/5491130572348"
 						target="_blank"
 						aria-label="WhatsApp"
 					>
@@ -262,5 +256,6 @@
 				</p>
 			</div>
 		</footer>
+		<script src="servicios.js"></script>
 	</body>
 </html>
