@@ -1,0 +1,98 @@
+.sobre-nosotros {
+  background-color: #111;
+  color: #ededed;
+  padding: 4rem 2rem;
+  text-align: center;
+
+  .contenido-sobre-nosotros {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .titulo-sobre-nosotros {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ededed;
+  }
+
+  .texto-sobre-nosotros {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-family: "Barlow Condensed", sans-serif;
+
+    span {
+      color: red;
+    }
+  }
+
+  .subtitulo-mapa {
+    font-size: 2rem;
+    font-family: "Bebas Neue", sans-serif;
+    color: #ededed;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .descripcion-mapa {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1.2rem;
+  }
+
+  .mapa-container {
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sobre-nosotros {
+    padding: 1rem 1rem 1rem 1rem; /* top, right, bottom, left */
+  }
+  .mapa-container iframe {
+    width: 100%;
+    height: 250px;
+    padding: 0.1rem;
+    margin-bottom: 0 !important;
+  }
+
+  .mapa-container {
+    padding: 0 1rem;
+    margin-bottom: 0rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .sobre-nosotros {
+    padding: 2rem 1.5rem;
+  }
+
+  .titulo-sobre-nosotros {
+    font-size: 2.2rem;
+  }
+
+  .texto-sobre-nosotros {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .subtitulo-mapa {
+    font-size: 1.7rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .descripcion-mapa {
+    font-size: 1.1rem;
+  }
+
+  .mapa-container iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 0.5rem;
+  }
+}

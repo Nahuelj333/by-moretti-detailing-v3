@@ -1,0 +1,389 @@
+/* === ESTILOS GENERALES === */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Urbanist", sans-serif;
+	background-color: #111;
+	color: #fff;
+}
+
+/* === HEADER === */
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 2rem;
+	position: sticky;
+	top: 0;
+	background-color: #111;
+	z-index: 1000;
+}
+
+.hero {
+	background-image: url("../assets/autodemaxi.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 55vh;
+}
+
+/* === NAVEGACIÓN === */
+.nav-container {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.navbar {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.nav-item {
+	color: white;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 1.1rem;
+}
+.nav-item:hover {
+	color: red;
+}
+
+/* Botón del header */
+.header-boton {
+	font-size: 1.1rem;
+	background-color: red;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	text-decoration: none;
+}
+
+.header-boton:hover {
+	background-color: rgb(204, 31, 31);
+	color: white;
+}
+
+/* Menú hamburguesa */
+.menu-toggle {
+	display: none;
+}
+
+.menu-icon {
+	display: none;
+	font-size: 2rem;
+	cursor: pointer;
+	user-select: none;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	z-index: 1001;
+}
+
+/* HERO */
+.hero {
+	background-color: black;
+	position: relative;
+	z-index: 1;
+}
+
+.hero-overlay {
+	padding: 4rem 2rem;
+}
+
+.hero-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	margin-top: 1rem;
+}
+
+.logo-hero img {
+	width: 200px;
+	height: auto;
+}
+
+.titulo-hero {
+	font-size: clamp(3rem, 5vw, 6rem);
+	font-weight: bold;
+	text-align: center;
+}
+.titulo-hero-estilo {
+	color: red;
+}
+
+.frase-hero {
+	margin-top: 2rem;
+	font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+	text-align: center;
+	color: #fff;
+}
+
+/* === SECCIÓN DE SERVICIOS === */
+.servicios-container {
+	padding: 5rem 2rem 2rem 2rem;
+	background-color: #000;
+	text-align: center;
+}
+
+.servicios-titulo {
+	font-size: 2.5rem;
+	margin-bottom: 0.5rem;
+	color: #fff;
+}
+
+.servicios-subtitulo {
+	font-size: 1.25rem;
+	color: #aaa;
+	margin-bottom: 2rem;
+}
+
+.servicios {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.5rem;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+.tarjeta-servicios {
+	background: #111;
+	border-radius: 12px;
+	overflow: hidden;
+	cursor: pointer;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+	transition: transform 0.3s ease;
+}
+
+.tarjeta-servicios:hover {
+	transform: scale(1.05);
+}
+
+.servicio-img {
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.3s ease;
+}
+
+.tarjeta-servicios:hover .servicio-img {
+	transform: scale(1.05);
+}
+
+.servicio-titulo {
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 1rem 0;
+	transition: color 0.3s ease;
+}
+
+.tarjeta-servicios:hover .servicio-titulo {
+	color: red;
+}
+
+.servicio-titulo span {
+	color: red;
+}
+
+/* === MODAL === */
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.85);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 2000;
+}
+
+.modal.activo {
+	display: flex;
+}
+
+.modal-contenido {
+	background: #fff;
+	color: #111;
+	max-width: 500px;
+	width: 90%;
+	padding: 2rem;
+	border-radius: 12px;
+	position: relative;
+	animation: aparecer 0.3s ease-out;
+}
+
+.modal-contenido h2 {
+	color: red;
+	margin-bottom: 1rem;
+}
+
+.modal-contenido ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.modal-contenido li {
+	margin-bottom: 0.5rem;
+	line-height: 1.5;
+}
+
+@keyframes aparecer {
+	from {
+		transform: scale(0.8);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.cerrar {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	background: none;
+	border: none;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+/* === RESPONSIVES === */
+
+/* === HERO escalonado (mobile-first) === */
+/* Base: móviles chicos (<600px) */
+.titulo-hero {
+	font-size: 2.5rem;
+	font-weight: 700;
+	text-align: center;
+	line-height: 1.1;
+}
+.frase-hero {
+	margin-top: 2rem;
+	font-size: 1.5rem;
+	text-align: center;
+	color: #fff;
+	line-height: 1.35;
+}
+
+/* ≥600px (móviles grandes / tablets en vertical) */
+@media (min-width: 600px) {
+	.titulo-hero {
+		font-size: 3.2rem;
+	}
+	.frase-hero {
+		font-size: 1.8rem;
+	}
+}
+
+/* ≥900px (tablets horizontales / notebooks chicos) */
+@media (min-width: 900px) {
+	.titulo-hero {
+		font-size: 4rem;
+	}
+	.frase-hero {
+		font-size: 2rem;
+	}
+}
+
+/* ≥1024px (laptops) */
+@media (min-width: 1024px) {
+	.titulo-hero {
+		font-size: 5rem;
+	}
+	.frase-hero {
+		font-size: 2.2rem;
+	}
+}
+
+/* ≥1200px (desktop) */
+@media (min-width: 1200px) {
+	.titulo-hero {
+		font-size: 6rem;
+	}
+	.frase-hero {
+		font-size: 2.5rem;
+	}
+}
+
+/* === SERVICIOS RESPONSIVE === */
+@media (max-width: 900px) {
+	.servicios {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+}
+
+@media (max-width: 600px) {
+	.servicios {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* === NAVBAR + HERO RESPONSIVE === */
+@media screen and (max-width: 768px) {
+	.header {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		position: static;
+	}
+
+	.nav-container {
+		flex-direction: column;
+		gap: 0.5rem;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.navbar {
+		display: none;
+		flex-direction: column;
+		gap: 0.5rem;
+		padding: 1rem;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.menu-toggle:checked + .menu-icon + .navbar {
+		display: flex;
+	}
+
+	.menu-icon {
+		display: block;
+	}
+
+	.header-boton {
+		width: 100%;
+		max-width: 300px;
+		text-align: center;
+		margin-top: 1rem;
+	}
+
+	.hero {
+		min-height: auto;
+		padding: 2rem 1rem;
+		background-image: url("../assets/auto.png");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.hero-content {
+		gap: 1.5rem;
+	}
+
+	.logo-hero img {
+		display: none;
+	}
+}
