@@ -13,13 +13,10 @@
 .footer-titulo {
 	font-family: "Bebas Neue", sans-serif;
 	font-size: 2.5rem;
-	margin-bottom: 0.5rem;
+	margin-bottom: 1rem;
 	color: #ededed;
-}
-
-.footer-titulo span {
-	color: red;
-	font-family: "Bebas Neue", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }
 
 .footer-redes {
@@ -33,32 +30,53 @@
 	background-color: #1a1a1a;
 	padding: 0.7rem;
 	border-radius: 50%;
-	color: #ededed;
-	font-size: 1.5rem;
-	transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+	transition: transform 0.3s ease, background 0.3s ease;
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	display: inline-flex;
 	width: 60px;
 	height: 60px;
+	color: #ededed;
 }
 
+/* === Colores en hover === */
 .footer-redes a:hover {
-	background-color: red;
 	transform: scale(1.1);
 	color: #fff;
 }
 
-.footer-redes a:hover svg path {
-	fill: #fff !important;
+.footer-redes a[aria-label="Instagram"]:hover {
+	background: radial-gradient(
+		circle at 30% 107%,
+		#fdf497 0%,
+		#fdf497 5%,
+		#fd5949 45%,
+		#d6249f 60%,
+		#285aeb 90%
+	);
 }
 
-.icono,
-.icono path {
+.footer-redes a[aria-label="Facebook"]:hover {
+	background: #1877f2;
+}
+
+.footer-redes a[aria-label="WhatsApp"]:hover {
+	background: #25d366;
+}
+
+.footer-redes a[aria-label="Threads"]:hover {
+	background: #000;
+}
+
+.icono {
 	width: 32px;
 	height: 32px;
-	fill: currentColor;
-	transition: transform 0.3s ease, fill 0.3s ease;
+	color: inherit;
+}
+
+.icono path {
+	fill: currentColor !important;
+	transition: fill 0.3s ease;
 }
 
 .footer-copy {
@@ -73,14 +91,9 @@
 		padding: 2rem 1rem;
 	}
 
-	.footer-contenido {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
 	.footer-titulo {
 		font-size: 2rem;
+		letter-spacing: 1px;
 	}
 
 	.footer-redes {
@@ -94,7 +107,7 @@
 		padding: 0.5rem;
 	}
 
-	.footer-redes .icono {
+	.footer .icono {
 		width: 24px;
 		height: 24px;
 	}
