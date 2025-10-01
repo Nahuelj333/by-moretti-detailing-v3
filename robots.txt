@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+Sitemap: https://by-moretti-detailing-v3.netlify.app/sitemap.xml
