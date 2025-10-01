@@ -22,8 +22,8 @@ const contenidoServicios = {
   `,
 	pintura: `
     <button class="cerrar">X</button>
-    <h2>Corrección de Pintura</h2>
-    <p>Eliminamos rayas, swirls y marcas de lavado para devolver el brillo de fábrica a tu auto.</p>
+    <h2>Chapa y Pintura</h2>
+    <p>Reparamos golpes y rayones, eliminamos swirls y marcas de lavado para un acabado como recién salido de concesionaria.</p>
   `,
 	detalles: `
     <button class="cerrar">X</button>
